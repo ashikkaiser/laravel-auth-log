@@ -1,10 +1,10 @@
 <?php
 
-namespace SamuelNitsche\AuthLog\Tests\Unit;
+namespace AshikKaiser\AuthLog\Tests\Unit;
 
 use Illuminate\Support\Facades\Auth;
-use SamuelNitsche\AuthLog\Tests\Models\User;
-use SamuelNitsche\AuthLog\Tests\TestCase;
+use AshikKaiser\AuthLog\Tests\Models\User;
+use AshikKaiser\AuthLog\Tests\TestCase;
 
 class StoreLoginsTest extends TestCase
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace SamuelNitsche\AuthLog\Console;
+namespace AshikKaiser\AuthLog\Console;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Carbon;
-use SamuelNitsche\AuthLog\AuthLog;
+use AshikKaiser\AuthLog\AuthLog;
 
 class ClearCommand extends Command
 {

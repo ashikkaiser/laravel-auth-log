@@ -1,6 +1,6 @@
 <?php
 
-namespace SamuelNitsche\AuthLog;
+namespace AshikKaiser\AuthLog;
 
 trait AuthLogable
 {

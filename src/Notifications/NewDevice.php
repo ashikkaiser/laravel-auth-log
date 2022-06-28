@@ -1,6 +1,6 @@
 <?php
 
-namespace SamuelNitsche\AuthLog\Notifications;
+namespace AshikKaiser\AuthLog\Notifications;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -8,7 +8,7 @@ use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Messages\NexmoMessage;
 use Illuminate\Notifications\Messages\SlackMessage;
 use Illuminate\Notifications\Notification;
-use SamuelNitsche\AuthLog\AuthLog;
+use AshikKaiser\AuthLog\AuthLog;
 
 class NewDevice extends Notification implements ShouldQueue
 {

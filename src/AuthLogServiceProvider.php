@@ -1,6 +1,6 @@
 <?php
 
-namespace SamuelNitsche\AuthLog;
+namespace AshikKaiser\AuthLog;
 
 use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Support\ServiceProvider;
@@ -18,27 +18,27 @@ class AuthLogServiceProvider extends ServiceProvider
     {
         $this->registerEvents();
 
-        $this->loadViewsFrom(__DIR__.'/../resources/views', 'auth-log');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'auth-log');
 
-        $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'auth-log');
+        $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'auth-log');
 
-        $this->mergeConfigFrom(__DIR__.'/../config/auth-log.php', 'auth-log');
+        $this->mergeConfigFrom(__DIR__ . '/../config/auth-log.php', 'auth-log');
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../database/migrations' => database_path('migrations'),
+                __DIR__ . '/../database/migrations' => database_path('migrations'),
             ], 'auth-log-migrations');
 
             $this->publishes([
-                __DIR__.'/../resources/views' => resource_path('views/vendor/auth-log'),
+                __DIR__ . '/../resources/views' => resource_path('views/vendor/auth-log'),
             ], 'auth-log-views');
 
             $this->publishes([
-                __DIR__.'/../resources/lang' => resource_path('lang/vendor/auth-log'),
+                __DIR__ . '/../resources/lang' => resource_path('lang/vendor/auth-log'),
             ], 'auth-log-translations');
 
             $this->publishes([
-                __DIR__.'/../config/auth-log.php' => config_path('auth-log.php'),
+                __DIR__ . '/../config/auth-log.php' => config_path('auth-log.php'),
             ], 'auth-log-config');
         }
     }

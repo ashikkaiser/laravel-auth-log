@@ -1,13 +1,13 @@
 <?php
 
-namespace SamuelNitsche\AuthLog\Tests\Unit;
+namespace AshikKaiser\AuthLog\Tests\Unit;
 
 use Illuminate\Support\Facades\Auth;
 use Mockery;
-use SamuelNitsche\AuthLog\Listeners\LogSuccessfulLogin;
-use SamuelNitsche\AuthLog\Listeners\LogSuccessfulLogout;
-use SamuelNitsche\AuthLog\Tests\Models\User;
-use SamuelNitsche\AuthLog\Tests\TestCase;
+use AshikKaiser\AuthLog\Listeners\LogSuccessfulLogin;
+use AshikKaiser\AuthLog\Listeners\LogSuccessfulLogout;
+use AshikKaiser\AuthLog\Tests\Models\User;
+use AshikKaiser\AuthLog\Tests\TestCase;
 
 class AuthLogServiceProviderTest extends TestCase
 {

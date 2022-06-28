@@ -1,12 +1,12 @@
 <?php
 
-namespace SamuelNitsche\AuthLog\Listeners;
+namespace AshikKaiser\AuthLog\Listeners;
 
 use Illuminate\Auth\Events\Logout;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Jenssegers\Agent\Agent;
-use SamuelNitsche\AuthLog\AuthLog;
+use AshikKaiser\AuthLog\AuthLog;
 
 class LogSuccessfulLogout
 {
@@ -46,7 +46,7 @@ class LogSuccessfulLogout
             $browser = $agent->browser();
             $authenticationLog = $user->authentications()->whereIpAddress($ip)->wherePlatform($platform)->whereBrowser($browser)->first();
 
-            if (! $authenticationLog) {
+            if (!$authenticationLog) {
                 $authenticationLog = new AuthLog([
                     'ip_address' => $ip,
                     'platform' => $platform,

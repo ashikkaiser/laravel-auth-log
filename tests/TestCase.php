@@ -1,13 +1,13 @@
 <?php
 
-namespace SamuelNitsche\AuthLog\Tests;
+namespace AshikKaiser\AuthLog\Tests;
 
 use CreateAuthLogTable;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Schema;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
-use SamuelNitsche\AuthLog\AuthLogServiceProvider;
+use AshikKaiser\AuthLog\AuthLogServiceProvider;
 
 abstract class TestCase extends OrchestraTestCase
 {
@@ -16,7 +16,7 @@ abstract class TestCase extends OrchestraTestCase
         parent::setUp();
 
         $this->setUpDatabase();
-        
+
         Notification::fake();
     }
 
@@ -36,7 +36,7 @@ abstract class TestCase extends OrchestraTestCase
 
     protected function createAuthLogTable()
     {
-        include_once __DIR__.'/../database/migrations/2017_09_01_000000_create_auth_log_table.php';
+        include_once __DIR__ . '/../database/migrations/2017_09_01_000000_create_auth_log_table.php';
 
         (new CreateAuthLogTable())->up();
     }

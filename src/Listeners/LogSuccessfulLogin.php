@@ -1,13 +1,13 @@
 <?php
 
-namespace SamuelNitsche\AuthLog\Listeners;
+namespace AshikKaiser\AuthLog\Listeners;
 
 use Illuminate\Auth\Events\Login;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Jenssegers\Agent\Agent;
-use SamuelNitsche\AuthLog\AuthLog;
-use SamuelNitsche\AuthLog\Notifications\NewDevice;
+use AshikKaiser\AuthLog\AuthLog;
+use AshikKaiser\AuthLog\Notifications\NewDevice;
 
 class LogSuccessfulLogin
 {
@@ -55,7 +55,7 @@ class LogSuccessfulLogin
 
         $user->authentications()->save($authenticationLog);
 
-        if (! $known && config('auth-log.notify')) {
+        if (!$known && config('auth-log.notify')) {
             $user->notify(new NewDevice($authenticationLog));
         }
     }

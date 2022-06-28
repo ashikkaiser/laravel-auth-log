@@ -1,11 +1,11 @@
 <?php
 
-namespace SamuelNitsche\AuthLog\Tests\Models;
+namespace AshikKaiser\AuthLog\Tests\Models;
 
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
-use SamuelNitsche\AuthLog\AuthLogable;
+use AshikKaiser\AuthLog\AuthLogable;
 
 class User extends Model implements Authenticatable
 {
