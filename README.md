@@ -1,6 +1,6 @@
 # Laravel Auth Log
 
-[![Build Status](https://travis-ci.com/SamuelNitsche/laravel-auth-log.svg?branch=master)](https://travis-ci.com/SamuelNitsche/laravel-auth-log)
+[![Build Status](https://travis-ci.com/AshikKaiser/laravel-auth-log.svg?branch=master)](https://travis-ci.com/AshikKaiser/laravel-auth-log)
 [![StyleCI](https://github.styleci.io/repos/188419456/shield?branch=master)](https://github.styleci.io/repos/188419456)
 
 Laravel Auth Log is a package to automatically log all logins of your users. It can also send notifications when a successful login was made from an unknown device.
@@ -13,13 +13,13 @@ This package is a modified and extended version of [https://github.com/yadahan/l
 
 You may use Composer to install Laravel Auth Log into your Laravel project:
 
-    composer require samuelnitsche/laravel-auth-log
+    composer require ashikkaiser/laravel-auth-log
 
 ### Configuration
 
 After installing the Laravel Auth Log, publish its config, migration and view, using the `vendor:publish` Artisan command:
 
-    php artisan vendor:publish --provider="SamuelNitsche\AuthLog\AuthLogServiceProvider"
+    php artisan vendor:publish --provider="AshikKaiser\AuthLog\AuthLogServiceProvider"
 
 Next, you need to migrate your database. The Laravel Auth Log migration will create the table your application needs to store auth logs:
 
@@ -28,7 +28,7 @@ Next, you need to migrate your database. The Laravel Auth Log migration will cre
 Finally, add the `AuthLogable` and `Notifiable` traits to your authenticatable model (by default, `App\User` model). These traits provides various methods to allow you to get common auth log data, such as last login time, last login IP address, and set the channels to notify the user when login from a new device:
 
 ```php
-use SamuelNitsche\AuthLog\AuthLogable;
+use AshikKaiser\AuthLog\AuthLogable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
